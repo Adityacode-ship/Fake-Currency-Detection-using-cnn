@@ -1,0 +1,12 @@
+Steps to run the code 
+
+
+1. Open cmd and type the below command and hit enter. 
+
+cd C:\Users\acer\Desktop\fake_currency_detection_main
+
+2. type python app.py and hit enter
+
+3. open chrome and hit the below url... 
+
+ http://127.0.0.1:5000
