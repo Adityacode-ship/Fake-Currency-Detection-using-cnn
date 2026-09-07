@@ -215,16 +215,10 @@ def download_report(filename):
     except Exception as e:
         return jsonify({'error': 'Report not found'}), 404
 
+# Load model when application starts
+load_detection_model()
+
 if __name__ == '__main__':
     print("Starting Currency Detection Flask App...")
-    
-    # Try to load the model
-    if not load_detection_model():
-        print("\n" + "="*50)
-        print("WARNING: Model could not be loaded!")
-        print("Please place your 'Fake-currency.keras' file in the same directory as app.py")
-        print("The app will start but predictions will not work until the model is loaded.")
-        print("="*50 + "\n")
-    
     print("Server starting on http://localhost:5000")
     app.run(debug=True, host='0.0.0.0', port=5000)
