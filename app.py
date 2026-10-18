@@ -178,11 +178,11 @@ def predict():
             filepath, threshold=0.4
         )
         
-        # Generate PDF report
-        # report_filename = generate_pdf_report(
-        #     filepath, final_label, scores, labels, fake_votes, real_votes
-        # )
-        report_filename = None
+        Generate PDF report
+        report_filename = generate_pdf_report(
+            filepath, final_label, scores, labels, fake_votes, real_votes
+        )
+        # report_filename = None
         
         # Calculate confidence score (average of all rotation scores)
         avg_score = np.mean(list(scores.values()))
